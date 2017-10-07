@@ -25,7 +25,7 @@ var SCORMify = (function () {
         var scormApi = findLMS(window);
 
         if ((scormApi == null) && (window.opener != null) && (typeof (window.opener) != "undefined"))
-            scormApi = findAPI(window.opener);
+            scormApi = findLMS(window.opener);
 
         if (scormApi == null)
             alert("Unable to find an API adapter");
